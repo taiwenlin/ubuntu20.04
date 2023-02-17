@@ -1,0 +1,10 @@
+<launch>
+    <include file="$(find ros_launch)/launch/launch_arg.launch">
+        <arg name="turtle_id"   value="a"/>
+    </include>
+
+    <include file="$(find ros_launch)/launch/launch_arg.launch">
+        <arg name="turtle_id"   value="b"/>
+    </include>
+</launch>
+
