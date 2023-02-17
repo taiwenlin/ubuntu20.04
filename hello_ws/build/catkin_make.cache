@@ -1,0 +1,2 @@
+hello:launchtest:pow_service:turtle_control
+-DCATKIN_DEVEL_PREFIX=/home/lintaiwen/hello_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lintaiwen/hello_ws/install -G Unix Makefiles

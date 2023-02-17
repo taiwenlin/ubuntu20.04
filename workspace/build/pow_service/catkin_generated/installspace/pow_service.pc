@@ -1,0 +1,8 @@
+prefix=/home/lintaiwen/workspace/install
+
+Name: pow_service
+Description: Description of pow_service
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lsrv_test
+Requires: roscpp std_msgs message_runtime

@@ -1,0 +1,20 @@
+<launch>
+
+    <arg name="turtle_id" default="orig"/>
+    
+    <node pkg = "turtle_control"  type = "rand_run"  name = "random_run_node_$(arg turtle_id)"  respawn = "true" >
+        <remap from="/turtle1/cmd_vel"  	  to="/turtle_$(arg turtle_id)/turtle1/cmd_vel"	/>
+    </node>
+
+    <node pkg = "turtle_control"  type = "get_turtle_fb"  name = "get_turtle_fb_$(arg turtle_id)"  respawn = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/turtle_$(arg turtle_id)/turtle1/cmd_vel"	/>
+    </node>
+
+    <!-- respawn and required cannot both be set to true.  -->
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "turtlesim_$(arg turtle_id)"  required = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/turtle_$(arg turtle_id)/turtle1/cmd_vel"	/>
+    </node>
+
+</launch>
+
+

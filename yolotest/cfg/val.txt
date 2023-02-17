@@ -1,0 +1,4 @@
+/home/lintaiwen/yolotest/val/20230209_153900.jpg
+/home/lintaiwen/yolotest/val/20230209_153902.jpg
+/home/lintaiwen/yolotest/val/20230209_153905.jpg
+/home/lintaiwen/yolotest/val/20230209_153907.jpg

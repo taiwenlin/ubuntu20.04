@@ -1,0 +1,2 @@
+launchtest:msg_test:test
+-DCATKIN_DEVEL_PREFIX=/home/lintaiwen/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/lintaiwen/workspace/install -G Unix Makefiles

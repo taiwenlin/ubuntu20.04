@@ -1,0 +1,29 @@
+<launch>
+    <arg name="rand" default="true"/>
+
+    <!-- if rand is true, this group will be executed -->
+    <group ns="/group" if="$(arg rand)">
+        <include file="$(find launchtest)/src/launch/launch_arg.launch">
+            <arg name="turtle_id"   value="a"/>
+        </include>
+
+        <include file="$(find launchtest)/src/launch/launch_arg.launch">
+            <arg name="turtle_id"   value="b"/>
+        </include>
+    </group>
+
+    <!-- if rand is false, this group will be executed -->
+    <group ns="/group" unless="$(arg rand)">
+        <include file="$(find launchtest)/src/launch/first_launch.launch" >
+            <!-- <arg name="turtle_id"   value="b"/> -->
+        </include>
+    </group>
+
+</launch>
+
+<!--
+ There only three parameters in group tag 
+1. ns
+2. if
+3. unless
+-->

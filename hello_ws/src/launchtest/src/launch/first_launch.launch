@@ -1,0 +1,48 @@
+<launch>
+    <arg name="a" default="1"/>
+    <arg name="b" default="2"/>
+    <arg name="c" default="3"/>
+    <arg name="d" default="4"/>
+    <arg name="e" default="5"/>
+    <arg name="f" default="6"/>
+    <arg name="g" default="7"/>
+    <arg name="h" default="8"/>
+    <arg name="i" default="9"/>
+    <arg name="j" default="10"/>
+    
+    <node 
+    pkg = "pow_service"
+    type = "pow_client" 
+    name = "client1"
+    args="$(arg a) $(arg b)"
+    />
+    <node 
+    pkg = "pow_service"
+    type = "pow_client" 
+    name = "client2"
+    args="$(arg c) $(arg d)"
+    />
+    <node 
+    pkg = "pow_service"
+    type = "pow_client" 
+    name = "client3"
+    args="$(arg e) $(arg f)"
+    />
+    <node 
+    pkg = "pow_service"
+    type = "pow_client" 
+    name = "client4"
+    args="$(arg g) $(arg h)"
+    />
+    <node 
+    pkg = "pow_service"
+    type = "pow_client" 
+    name = "client5"
+    args="$(arg i) $(arg j)"
+    />
+</launch>
+
+
+<!-- 
+<node pkg=”package_name”   type=”executable_name”   name=”node_name” />
+ -->

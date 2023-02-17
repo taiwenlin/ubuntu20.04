@@ -1,0 +1,23 @@
+<launch>
+    <node pkg = "launchtest"  type = "random_run"  name = "random_run_node"  respawn = "true" ns="/remap_ans">
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_ans/turtle1/cmd_vel"	/>
+    </node>
+    <node pkg = "launchtest"  type = "rev_turtle"  name = "rev_node"  respawn = "true" ns="/remap_bns">
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_bns/turtle1/cmd_vel"	/>
+    </node>
+    <!-- <node pkg = "turtle_control"  type = "rand_run"  name = "random_run_node"  respawn = "true" ns="/remap_ns">
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_ns/turtle1/cmd_vel"	/>
+    </node> -->
+<!--
+    <node pkg = "turtle_control"  type = "get_turtle_fb"  name = "get_turtle_fb"  respawn = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_ns/turtle1/cmd_vel"	/>
+    </node>
+-->
+    <!-- respawn and required cannot both be set to true.  -->
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "turtlesim_a"  required = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_ans/turtle1/cmd_vel"	/>
+    </node>
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "turtlesim_b"  required = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/remap_bns/turtle1/cmd_vel"	/>
+    </node>
+</launch>
