@@ -199,6 +199,6 @@ if __name__ == "__main__":
     roll  = math.radians(0)
     yaw   = math.radians(0)
     end_orientation = [pitch, roll, yaw]
-
+    print(1)
     six_dof_link.demo(end_position, end_orientation)
     

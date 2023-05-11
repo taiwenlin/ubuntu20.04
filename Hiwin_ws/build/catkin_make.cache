@@ -1,0 +1,2 @@
+Modbus_Hiwin
+-DCATKIN_DEVEL_PREFIX=/home/lintaiwen/Hiwin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lintaiwen/Hiwin_ws/install -G Unix Makefiles
